@@ -1,0 +1,36 @@
+/*
+
+INPUT-george bush
+
+OPUTPUT-GEORGE BUSH
+__________________________________________________________________________________*/
+
+
+import java.util.Scanner;
+
+public class Toupperandlowercase {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Press 1 for uppercase and 2 for lower case");
+        int y= sc.nextInt();
+            if (y==1){
+                changeToUpperCase();
+            }else if (y==2){
+                changeToLowerCase();
+            }else
+                System.out.println("Run the programme again");
+    }
+    public static void changeToUpperCase(){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("enter the string");
+        String x= scn.nextLine();
+        System.out.println(x.toUpperCase());
+    }
+    public static void changeToLowerCase(){
+        Scanner scn=new Scanner(System.in);
+        System.out.println("enter the string");
+        String x= scn.nextLine();
+        System.out.println(x.toLowerCase());
+    }
+
+}
