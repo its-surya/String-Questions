@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class countVowels {
+    public static void main(String[] args) {
+        countTheNumberOfVowels();
+
+    }
+    public static void countTheNumberOfVowels(){
+        Scanner scn = new Scanner(System.in);
+        System.out.println("Enter the string");
+        String x = scn.nextLine();
+        int count = 0;
+        for (int i = 0; i < x.length(); i++) {
+            if (x.charAt(i) == 'a' ||x.charAt(i) == 'A' ||x.charAt(i) == 'e' ||x.charAt(i) == 'E'|| x.charAt(i) == 'i' ||x.charAt(i) == 'I'||x.charAt(i) == 'o' ||x.charAt(i) == 'O'||x.charAt(i) == 'u'||x.charAt(i) == 'U') {
+                count++;
+            }
+        }
+        System.out.println("the number of Vowels here is:" + count);
+
+    }
+}
