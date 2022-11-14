@@ -1,0 +1,21 @@
+public class eachWordReverse {
+    public static void main(String[] args) {
+        reverseEachWord("hello guys whats up");
+    }
+    public static void reverseEachWord(String x){
+        String reversed="";
+        String[] words=x.split(" ");
+        for (int i=0;i< words.length;i++){
+            String rev=words[i]+" ";
+            char r;
+            for (int j=rev.length()-1;j>=0 ;j--){
+                r=rev.charAt(j);
+                reversed+=r;
+            }
+        }
+        System.out.println("string is:"+x);
+        System.out.println("reversed form is:"+reversed);
+
+    }
+}
+
