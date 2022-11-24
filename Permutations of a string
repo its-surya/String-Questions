@@ -1,0 +1,67 @@
+/*_______________________________________________________________________________
+
+1. You are given a string. 
+2. You have to print all permutations of the given string iteratively.
+
+Input Format
+A String
+
+Output Format
+All permutations of the given string(one in a line). 
+
+Sample Input
+abc
+
+
+Sample Output
+abc
+bac
+cab
+acb
+bca
+cba
+
+
+_________________________________________________________________________________*/
+
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+	public static void solution(String str){
+		// write your code here
+		int k=str.length();		
+		int n=permutation(k);
+
+		for(int i=0;i<n;i++){
+				   StringBuilder sb=new StringBuilder(str);		    
+		    int temp=i;
+		    for(int div=k;div>=1;div-- ){
+		        int q=temp/div;
+		        int g=temp%div;
+		        
+		        System.out.print(sb.charAt(g));
+		        sb.deleteCharAt(g);
+		        temp=q; 
+		        
+		    }
+		    
+		    System.out.println("");
+		}
+	}
+	
+	public static int permutation(int n){
+	    int val=1;
+	    for(int i=1;i<=n;i++){
+	        val*=i;
+	    }
+	    return val;
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		solution(str);
+	}
+
+}
